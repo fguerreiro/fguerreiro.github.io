@@ -1,5 +1,10 @@
-runtime: go111
+runtime: python27
+api_version: 1
 
 handlers:
-- url: /.*
-  script: auto
+- url: /
+  static_files: web/index.html
+  upload: web/index.html
+
+- url: /
+  static_dir: web
