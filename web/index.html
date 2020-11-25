@@ -9,6 +9,16 @@
     <script src="js/CoveoJsSearch.Lazy.js"></script>
     <script src="js/coveo.extension.js"></script>
     <script src="js/templates/templates.js"></script>
+    <style>
+      a.CoveoResultLink {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        margin-left: 40px;
+        font-smooth: never;
+        -webkit-font-smoothing: none;
+      }
+    </style>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         Coveo.SearchEndpoint.configureCloudV2Endpoint(
@@ -71,8 +81,8 @@
               </div>
               <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
                 <div class="coveo-result-row" style="margin-top:0;">
-                  <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;" role="heading" aria-level="2">
-                    <a class="CoveoResultLink"></a>
+                  <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;display: flex;margin-left: 84px; justify-content: center; role="heading" aria-level="2">
+                    <h3><a class="CoveoResultLink"></a></h3>
                   </div>
                   <div class="coveo-result-cell" style="width:120px;text-align:right;font-size:12px">
                     <div class="coveo-result-row">
@@ -80,9 +90,14 @@
                     </div>
                   </div>
                 </div>
+                
+                <div class="coveo-result-row" style="display: flex;  justify-content: center;">
+                  <img src="<%= raw.pokemon_img %>" width="150" height="150" style="align-items: center;border: solid black 1px">
+                </div>
+                <br />
+                <br />
                 <div class="coveo-result-row" style="margin-top:10px;">
                   <div class="coveo-result-cell">
-                    <img src="<%= raw.pokemon_img %>" width="50" height="50" />
                     <span class="CoveoExcerpt"></span>
                     
                   </div>
